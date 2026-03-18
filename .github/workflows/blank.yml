@@ -7,10 +7,13 @@ on:
         description: "this is input demo"
         required: true
         default: dev
-
+     tags:
+        description: "this is tag"
+        required: true
+        default: 1.0.0
 jobs:
   inputdemo:
     runs-on: ubuntu-latest
     steps:
       - name: run input demo
-        run: echo "Deploy the application ${{ inputs.environment }}"
+        run: echo "Deploy the ${{inputs.tag}}  application ${{ inputs.environment }}"
