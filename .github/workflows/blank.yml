@@ -7,6 +7,11 @@ on:
         description: "this is input demo"
         required: true
         default: dev
+        type: choice
+        options:
+          - dev
+          - qa
+          - test
       tag:
         description: "this is tag"
         required: true
